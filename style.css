@@ -13,7 +13,7 @@ Theme URI: http://www.jesse-smith.net/widgeon-starting-point-empty-wordpress-the
 Description: A starting point for your responsive custom WordPress theme, with HTML5 and CSS3.  Fully expandible.
 
 Author URI: http://www.jesse-smith.net/
-Version: 1.4.3
+Version: 1.4.4
 Tags: blank, empty, responsive
 License: GPL
 License URI: http://www.gnu.org/copyleft/gpl.html
@@ -32,6 +32,9 @@ and you can easily add those if they suit your purpose.
 Includes some elements of the HTML5 boilerplate, among others.
 using advice from http://yoast.com/wordpress-theme-anatomy/
 and the documentation at http://codex.wordpress.org/Theme_Development
+
+Version 1.4.4 removes most "Plugin Territory" functionality in accordance with the Theme Developer Guidelines at:
+http://make.wordpress.org/themes/guidelines/guidelines-plugin-territory/
 
 */
 

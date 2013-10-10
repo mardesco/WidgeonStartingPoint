@@ -101,15 +101,10 @@ wp_nav_menu(array(
     <!-- optionally remove nav-specific classes as you see fit.  -->    	
     <div id="main" role="main">
 	
-		<div id="breadcrumbs">
-			<div class="content">
-				You are here: 
-				<?php 
-				// this one constructor does the whole thing.  
-				$crumbs = new simple_breadcrumb(); 
-			?>
-			</div>
-		</div>	
+<?php 
+	// deleted breadcrumbs as of version 1.4.4: Plugin Territory
+	// If you decide to install a breadcrumb plugin, you might place its main function here.
+?>	
 		
 		<a id="contentLink" class="visuallyhidden">&nbsp;</a>
 		

@@ -8,13 +8,23 @@
 
 
 
-// first, a litle security.
+// first, a little security.
 
 // prevent direct script access
 if(__FILE__ == $_SERVER['SCRIPT_FILENAME']){
     die("This file cannot be executed directly");
 }
 
+
+# begin Plugin Territory Trespass #
+
+// if you want to release your theme on WordPress.org, you'll have to delete this section.
+
+// NOTE for version 1.4.4: 
+// this section contravenes the WP theme dev guidelines 
+// at http://make.wordpress.org/themes/guidelines/guidelines-plugin-territory/
+// by "Removing or modifying non-presentational core hooks"
+// but I'm leaving it in here anyway.
 
 // remove the wordpress version number from the generator meta tag.
 // from http://wordpress.org/support/topic/remove-ltmeta-namegenerator-contentwordpress-25-gt
@@ -26,6 +36,7 @@ remove_action('wp_head', 'rsd_link');
 //remove the version number of your WordPress installation from the "generator" tag in the source code.
 //makes it harder for an attacker to guess which security vulnerabilities your installation may have.
 //but please note, you should always keep your installation updated anyway!!!
+
 function remove_generator() {
 	return '';
 }
@@ -34,10 +45,16 @@ add_filter('the_generator', 'remove_generator');
 // Obscure login screen error messages
 // you may not require this function if your installation is using a robust security plugin.  But it doesn't seem to hurt anything.
 // courtesy of wpfunction.me
+// NOTE for version 1.4.4:
+// as above, this function is retained for now, even though it technically trespasses on plugin territory.
 function wpfme_login_obscure(){ 
 	return '<strong>Sorry</strong>: The supplied credentials are incorrect.';
 	}
 add_filter( 'login_errors', 'wpfme_login_obscure' );
+
+# end Plugin Territory Trespass #
+
+
 
 // per http://codex.wordpress.org/Theme_Development#Untrusted_Data
 // define a custom function for cleaning titles, when they are output within an html attribute.
@@ -129,13 +146,7 @@ require_once('includes/pagination.php');
 
 
 
-
-// new!  breadcrumbs by Christian "Kriesi" Budschedl
-// http://www.kriesi.at/archives/wordpress-plugin-simple-breadcrumb-navigation
-// to use: simply instantiate a simple_breadcrumb object in the place where you want your crumbs to appear
-// don't forget to style with css. 
-require_once('includes/breadcrumbs.php');
-
+/* DELETED breadcrumbs as of version 1.4.4: Plugin Territory. */
 
 
 
